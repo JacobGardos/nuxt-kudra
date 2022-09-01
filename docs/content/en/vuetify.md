@@ -11,7 +11,7 @@ This is an experimental feature to be used ideally with Vuetify >= 2.6 . Use wit
 
 </alert>
 
-<gif src="/demo/vuetify.gif" id="demo"></gif>
+<gif src="./demo/vuetify.gif" id="demo"></gif>
 
 Vuetify is a popular UI framework amongst vue/nuxt developers. However vuetify 2 & it's corresponding nuxt module `@nuxtjs/vuetify` is missing type definitions for its components and their slots / props.
 

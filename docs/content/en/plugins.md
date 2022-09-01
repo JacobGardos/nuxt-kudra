@@ -12,7 +12,7 @@ your `nuxt config` & have the dev server running.
 
 </alert>
 
-<gif src="/demo/plugins.gif" id="demo"></gif>
+<gif src="./demo/plugins.gif" id="demo"></gif>
 
 When you register a plugin with nuxt using `definePlugin`, kudra will automatically generate the appropriate
 types for your plugin.

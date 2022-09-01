@@ -12,7 +12,7 @@ In order for kudra to detect your global components, you must enable `components
 
 </alert>
 
-<gif src="/demo/components.gif" id="demo"></gif>
+<gif src="./demo/components.gif" id="demo"></gif>
 
 Kudra will automatically generate type definitions for your global nuxt components. This will allow
 your IDE to provide you with type information about your components & their props / slots.

@@ -11,7 +11,7 @@ This is an experimental feature. Use with caution
 
 </alert>
 
-<gif src="/demo/asyncData.gif" id="demo"></gif>
+<gif src="./demo/asyncData.gif" id="demo"></gif>
 
 The current `@nuxt/types` implementation does not respect the following rules of asyncData
 

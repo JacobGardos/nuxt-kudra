@@ -83,7 +83,7 @@ Insure the following fields are defined in your tsconfig
 
 Insure that you have downloaded [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) for vscode & have enabled [takeover mode](https://vuejs.org/guide/typescript/overview.html#volar-takeover-mode).
 
-<img src="/setup/volar.png"   width="1280" height="640" alt=""/>
+<img src="./setup/volar.png"   width="1280" height="640" alt=""/>
 
 ## Start The Server
 

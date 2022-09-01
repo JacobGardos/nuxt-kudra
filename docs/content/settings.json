@@ -2,8 +2,8 @@
   "title": "nuxt kudra docs",
   "url": "https://jacobgardos.github.io",
   "logo": {
-    "light": "/logo-light.svg",
-    "dark": "/logo-dark.svg"
+    "light": "./logo-light.svg",
+    "dark": "./logo-dark.svg"
   },
   "github": "JacobGardos/nuxt-kudra",
   "twitter": "@jacobgardos"
