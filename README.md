@@ -14,13 +14,13 @@
 <!-- Badges -->
 <!-- Badges -->
 
-[license-src]: https://flat.badgen.net/github/JacobGardos/nuxt-kudra/dev
+[license-src]: https://flat.badgen.net/github/JacobGardos/nuxt-kudra
 [license-href]: https://npmjs.com/package/@nuxtjs/axios
 [npm-version-src]: https://flat.badgen.net/npm/v/nuxt-kudra
 [npm-version-href]: https://npmjs.com/package/nuxt-kudra
-[codecov-src]: https://flat.badgen.net/codecov/c/github/JacobGardos/nuxt-kudra/dev
-[codecov-href]: https://codecov.io/gh/JacobGardos/nuxt-kudra/tree/dev
-[github-actions-ci-src]: https://github.com/JacobGardos/nuxt-kudra/actions/workflows/ci.yaml/badge.svg?branch=dev
+[codecov-src]: https://flat.badgen.net/codecov/c/github/JacobGardos/nuxt-kudra
+[codecov-href]: https://codecov.io/gh/JacobGardos/nuxt-kudra
+[github-actions-ci-src]: https://github.com/JacobGardos/nuxt-kudra/actions/workflows/ci.yaml/badge.svg
 [github-actions-ci-href]: https://github.com/JacobGardos/nuxt-kudra/actions?query=workflow%3Aci
 
 ## Features
