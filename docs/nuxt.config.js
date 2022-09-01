@@ -4,4 +4,8 @@ export default theme({
   docs: {
     primaryColor: "#2e72bc",
   },
+  target: "static",
+  router: {
+    base: "/nuxt-kudra/",
+  },
 });
