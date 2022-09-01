@@ -41,7 +41,7 @@
 
 > #### Nuxt plugins are typed correctly on the server and the client
 
-<img src="https://jacobgardos.github.io/nuxt-kudra/demo/components.gif" />
+<img src="https://jacobgardos.github.io/nuxt-kudra/demo/plugins.gif" />
 
 ## Getting Started
 
