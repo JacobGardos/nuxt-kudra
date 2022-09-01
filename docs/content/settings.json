@@ -1,0 +1,10 @@
+{
+  "title": "nuxt kudra docs",
+  "url": "www.google.com",
+  "logo": {
+    "light": "/logo-light.svg",
+    "dark": "/logo-dark.svg"
+  },
+  "github": "JacobGardos/nuxt-kudra",
+  "twitter": "@jacobgardos"
+}

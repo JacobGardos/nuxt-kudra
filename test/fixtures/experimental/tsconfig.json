@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "lib": ["esnext", "esnext.asynciterable", "dom"],
+    "resolveJsonModule": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "noEmit": true,
+    "baseUrl": ".",
+    "esModuleInterop": true,
+    "paths": {
+      "~/*": ["./*"],
+      "nuxt-kudra": ["../../../src"]
+    },
+    "allowJs": true,
+    "jsx": "preserve",
+    "types": ["@nuxt/types", "@nuxt/typescript-build", "jest", "@nuxtjs/vuetify"],
+    "experimentalDecorators": true
+  },
+  "vueCompilerOptions": {
+    "target": 2.7
+  }
+}
