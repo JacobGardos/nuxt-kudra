@@ -79,7 +79,7 @@ Kudra will generate the appropriates types for your plugin, depending on it's mo
 
 if you defined your plugin to be available on the client, you can access it via the `this` keyword in defineComponent, or in the template.
 
-Your IDE should provide you with type suggestions, similar to the [gif above](#demo).
+Your IDE should provide you with type suggestions, similar to the [gif above](plugins#demo).
 
 ```vue [pages/bar.vue]
 <template>
@@ -102,7 +102,7 @@ export default defineComponent({
 
 if you defined your plugin to be available on the client, you can access it from the `nuxtContext` under the `$plugins` key.
 
-Your IDE should provide you with type suggestions, similar to the [gif above](#demo)
+Your IDE should provide you with type suggestions, similar to the [gif above](plugins#demo)
 
 ```vue [pages/bar.vue]
 <template>

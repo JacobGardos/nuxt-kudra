@@ -11,7 +11,7 @@ Insure that you,
 
 1. have followed the [setup](/setup) steps.
 2. are running the nuxt `dev` server
-3. tried [restarting the Vue server](#how-can-i-restart-the-vue-server-in-vscode)
+3. tried [restarting the Vue server](FAQ#how-can-i-restart-the-vue-server-in-vscode)
 
 ## How can I restart the Vue Server in vscode ?
 

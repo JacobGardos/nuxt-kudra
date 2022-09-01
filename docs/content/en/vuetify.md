@@ -71,4 +71,4 @@ yarn add --dev @nuxtjs/vuetify
 
 ## Usage
 
-After enabling the feature, your IDE should provide you with type suggestions, similar to the [gif above](#demo)
+After enabling the feature, your IDE should provide you with type suggestions, similar to the [gif above](vuetify#demo)

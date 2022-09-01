@@ -63,7 +63,7 @@ After enabling the feature your asyncData methods will no longer have access to 
 
 Moreover, the return type of asyncData will now be available on the component instance via the `this` keyword, and inside the template.
 
-You should be able to get type suggestions for the return value of asyncData similar to the [gif above](#demo)
+You should be able to get type suggestions for the return value of asyncData similar to the [gif above](asyncData#demo)
 
 ```vue
 <template>

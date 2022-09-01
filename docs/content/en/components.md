@@ -83,7 +83,7 @@ export default defineComponent({
 
 ## Using your components
 
-After defining your components you should be able to get type suggestions for your global components & their props, similar to the [gif above](#demo).
+After defining your components you should be able to get type suggestions for your global components & their props, similar to the [gif above](components#demo).
 
 You will also receive suggestions for the lazy versions of your global components. This can be toggled off in the
 kudra componentLoader options.
