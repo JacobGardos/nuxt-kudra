@@ -11,8 +11,8 @@ features:
   - Vuetify component types (Experimental)
 ---
 
-<img src="/preview.png" class="light-img p-4" width="1280" height="640" alt=""/>
-<img src="/preview-dark.png" class="dark-img p-4" width="1280" height="640" alt=""/>
+<img src="./preview.png" class="light-img p-4" width="1280" height="640" alt=""/>
+<img src="./preview-dark.png" class="dark-img p-4" width="1280" height="640" alt=""/>
 
 Type generator for [Nuxt 2](https://nuxtjs.org).
 

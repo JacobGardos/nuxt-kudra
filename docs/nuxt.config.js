@@ -8,4 +8,7 @@ export default theme({
   router: {
     base: "/nuxt-kudra/",
   },
+  build: {
+    publicPath: "/nuxt-kudra/",
+  },
 });
