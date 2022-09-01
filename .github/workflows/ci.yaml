@@ -3,7 +3,10 @@ name: ci
 on:
   push:
     branches:
-      - dev
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   ci:
@@ -27,7 +30,10 @@ jobs:
       - run: npm ci
 
       - name: Tests
-        run: yarn jest
+        run: npm test
+
+      - name: Build
+        run: npm run build
 
       - name: Coverage
         uses: codecov/codecov-action@v2
