@@ -1,4 +1,3 @@
-24. Add Twitter
 25. Add README to repository
 26. Create a release
 
