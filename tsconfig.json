@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "declaration": true,
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "lib": ["esnext", "dom"],
+    "outDir": "lib",
+    "skipLibCheck": true,
+    "experimentalDecorators": true
+  },
+  "exclude": ["node_modules", "lib", "test", "templates"],
+  "include": ["src"]
+}
