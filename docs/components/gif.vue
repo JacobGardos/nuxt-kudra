@@ -27,16 +27,12 @@ export default {
 <style>
 .zoom {
   background-color: #141b24;
-  transition-delay: 1s;
-  transition-property: all;
-  transition: transform 0.2s; /* Animation */
   margin-bottom: 32px !important;
   margin-top: 32px !important;
 }
 
 .zoom:hover {
   cursor: pointer;
-  transform: scale(1.2);
 }
 
 .zoomed-img {

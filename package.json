@@ -17,8 +17,7 @@
     "start:fixture": "nuxt start test/fixture",
     "dev:basic": "nuxt test/fixtures/basic",
     "pack": "npm run build && npm pack",
-    "test": "jest -- dumb.test.ts",
-    "testOld": "jest --watchAll"
+    "test": "jest"
   },
   "devDependencies": {
     "@nuxt/test-utils": "^0.2.2",
