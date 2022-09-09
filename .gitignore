@@ -11,3 +11,5 @@ dist
 sw.*
 .env
 kudra
+nuxt-kudra-1.0.0.tgz
+lib

@@ -15,6 +15,15 @@
     "module.js",
     "templates"
   ],
+	"keywords": [
+		"nuxtjs",
+		"nuxt",
+		"nuxt typescript",
+		"ts",
+		"typescript",
+		"kudra",
+		"nuxt-kudra"
+	],
   "scripts": {
     "clean": "rimraf ./lib",
     "compile": "tsc -p .",
