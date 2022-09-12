@@ -11,7 +11,9 @@ import { GlobalsLoaderOptions } from "../global/options.interface";
 import { Loadable } from "../loadable";
 import * as Runtime from "./runtime";
 
-@Loadable("Plugin")
+@Loadable({
+  loaderName: "Plugin",
+})
 export class PluginLoader implements Hookable, SetsGlobal {
   public kudra: Kudra;
   public logger: Consola;

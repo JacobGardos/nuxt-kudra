@@ -32,6 +32,10 @@ export interface Component {
   preload: boolean;
 }
 
+export interface Layout {
+  [key: string]: string;
+}
+
 export interface Plugin {
   src: string;
   mode: "all" | "server" | "client";

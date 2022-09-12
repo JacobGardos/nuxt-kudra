@@ -6,7 +6,7 @@ import { DeepRequired } from "../../ts";
 export interface PluginsLoaderOptions {
   /**
    * Whether or not to generate global plugin types
-   * @default true
+   * @default false
    */
   disable?: boolean;
   /**

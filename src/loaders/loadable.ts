@@ -14,8 +14,10 @@ export interface LoaderOptions {
    * afterAll -> loader will be executed after all other loaders have been instantiated and
    * added, but before any of their hookable methods are called.
    *
+   * beforeAll -> loader will be executed before all other loaders have been instantiated and
+   *
    */
-  position?: "afterAll";
+  position?: "afterAll" | "beforeAll";
 }
 
 export interface LoaderClass extends LoaderOptions {
