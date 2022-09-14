@@ -1,6 +1,6 @@
 {
   "name": "nuxt-kudra",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Automated type generation for Nuxt 2",
   "repository": "JacobGardos/nuxt-kudra",
   "license": "MIT",
@@ -27,11 +27,10 @@
   "scripts": {
     "clean": "rimraf ./lib",
     "compile": "tsc -p .",
-    "watch": "npm run clean && tsc --watch",
     "build": "npm run clean && npm run compile",
     "build:fixture": "nuxt build test/fixture",
     "start:fixture": "nuxt start test/fixture",
-    "dev:basic": "nuxt test/fixtures/basic",
+    "dev:base": "nuxt test/fixtures/component-base",
     "pack": "npm run build && npm pack",
     "test": "jest"
   },
@@ -40,6 +39,7 @@
     "@nuxt/types": "^2.15.8",
     "@nuxt/typescript-build": "^2.1.0",
     "@nuxtjs/vuetify": "^1.12.3",
+    "@types/figlet": "^1.5.5",
     "@types/jest": "^28.1.7",
     "@vue/runtime-dom": "^3.2.37",
     "hable": "^3.0.0",
@@ -58,6 +58,7 @@
   "dependencies": {
     "consola": "^2.15.3",
     "deepmerge": "^4.2.2",
+    "figlet": "^1.5.2",
     "fs-jetpack": "^4.3.1",
     "ts-morph": "^15.1.0"
   }

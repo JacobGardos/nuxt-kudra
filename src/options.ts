@@ -1,3 +1,4 @@
+import { ComponentBaseLoaderOptions, defaultComponentBaseLoaderOptions } from "./loaders/component-base/options.interface";
 import { ComponentsLoaderOptions, defaultComponentLoaderOptions } from "./loaders/component/options.interface";
 import { defaultExperimentalLoaderOptions, ExperimentalLoaderOptions } from "./loaders/experimental/options.interface";
 import { defaultGlobalsLoaderOptions, GlobalsLoaderOptions } from "./loaders/global/options.interface";
@@ -31,10 +32,17 @@ export interface KudraOptions {
      */
     loaderAdded?: boolean;
   };
+  /**
+   * Whether or not to stamp generated
+   * kudra files with a disclaimer comment
+   * @default true
+   */
+  disclaimerText?: boolean;
   componentLoader?: ComponentsLoaderOptions;
   pluginLoader?: PluginsLoaderOptions;
   globalsLoader?: GlobalsLoaderOptions;
   experimentalOptions?: ExperimentalLoaderOptions;
+  componentBase?: ComponentBaseLoaderOptions;
 }
 
 export type CompleteOptions = DeepRequired<KudraOptions>;
@@ -45,8 +53,10 @@ export const defaultOptions: DeepRequired<KudraOptions> = {
   log: {
     loaderAdded: true,
   },
+  disclaimerText: true,
   componentLoader: defaultComponentLoaderOptions,
   pluginLoader: defaultPluginsLoaderOptions,
   globalsLoader: defaultGlobalsLoaderOptions,
   experimentalOptions: defaultExperimentalLoaderOptions,
+  componentBase: defaultComponentBaseLoaderOptions,
 };

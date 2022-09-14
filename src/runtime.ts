@@ -6,3 +6,4 @@ export const defineNuxtConfig = <T extends NuxtConfig>(config: T): T => {
 
 export * from "./loaders/component/runtime";
 export * from "./loaders/plugin/runtime";
+export * from "./loaders/component-base/runtime";

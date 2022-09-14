@@ -23,7 +23,7 @@ export type InjectionType<A extends TypedNuxtPlugin> = A extends TypedNuxtPlugin
 
 // The return function is called by nuxt, and jest can't detect that for some reason
 /* istanbul ignore next */
-export const definePlugin = <T>(plugin: KudraPlugin<T>): TypedNuxtPlugin<T> => {
+export const definePlugin = <T extends Record<string, any>>(plugin: KudraPlugin<T>): TypedNuxtPlugin<T> => {
   /* istanbul ignore next */
   return async (context, inject) => {
     // 1. Call the plugin

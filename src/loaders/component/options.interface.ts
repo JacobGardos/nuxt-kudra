@@ -6,7 +6,7 @@ import { DeepRequired } from "../../ts";
 export interface ComponentsLoaderOptions {
   /**
    * Whether or not to disable the component loader
-   * @default true
+   * @default false
    */
   disable?: boolean;
   /**
