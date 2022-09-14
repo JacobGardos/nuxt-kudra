@@ -18,8 +18,8 @@ export class ExperimentalLoader implements Hookable {
   }
 
   static shouldRun(kudraOptions: DeepRequired<KudraOptions>) {
-    const { asyncData, vuetify } = kudraOptions.experimentalOptions;
-    return !asyncData.disable || !vuetify.disable;
+    const { vuetify } = kudraOptions.experimentalOptions;
+    return !vuetify.disable;
   }
 
   public get options() {
@@ -31,10 +31,11 @@ export class ExperimentalLoader implements Hookable {
   }
 
   private generateTemplates() {
-    const { vuetify, asyncData, directoryName } = this.options;
+    const { vuetify, directoryName } = this.options;
 
     const templateFiles: { src: string; fileName: string }[] = [];
 
+    /* istanbul ignore next */
     if (!vuetify.disable) {
       templateFiles.push(
         {
@@ -46,13 +47,6 @@ export class ExperimentalLoader implements Hookable {
           fileName: this.kudra.resolveDTS(directoryName, vuetify["directoryName"], vuetify["componentsFilename"]),
         }
       );
-    }
-
-    if (!asyncData.disable) {
-      templateFiles.push({
-        src: this.kudra.resolveTemplate("experimental/asyncData.d.ts"),
-        fileName: this.kudra.resolveDTS(directoryName, asyncData["filename"]),
-      });
     }
 
     templateFiles.forEach((templateFile) => {

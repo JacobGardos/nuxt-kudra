@@ -11,19 +11,6 @@ export interface ExperimentalLoaderOptions {
    * @default experimental
    */
   directoryName?: string;
-  asyncData?: {
-    /**
-     * The name of the emitted .d.ts file
-     *
-     * @default asyncData
-     */
-    filename?: string;
-    /**
-     * Whether or not to generate experimental asyncData types
-     * @default true
-     */
-    disable?: boolean;
-  };
   vuetify?: {
     /**
      * The name of the experimental vuetify types directory
@@ -53,10 +40,6 @@ export interface ExperimentalLoaderOptions {
 
 export const defaultExperimentalLoaderOptions: DeepRequired<ExperimentalLoaderOptions> = {
   directoryName: "experimental",
-  asyncData: {
-    disable: true,
-    filename: "asyncData",
-  },
   vuetify: {
     directoryName: "vuetify",
     disable: true,

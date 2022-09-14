@@ -58,6 +58,18 @@ kudra: {
 
 - **loaderAdded** - Log out which loaders have been added
 
+## `disclaimerText`
+
+Whether or not to stamp generated kudra files with a disclaimer comment
+
+- Type: `boolean`
+
+```ts [Default Options]
+kudra: {
+  disclaimerText: true,
+}
+```
+
 ## `componentLoader`
 
 Options for generating global component types
@@ -120,6 +132,39 @@ kudra: {
 - **globalDefineComponent** - Whether or not to make defineComponent available globally
 - **globalDefinePlugin** - Whether or not to make definePlugin available globally
 
+## `componentBase`
+
+Options for component base option types
+
+- Type: `object`
+
+```ts [Default Options]
+kudra: {
+  componentBase: {
+		disable: false,
+		filename: "component-base",
+		typedProperties: {
+		asyncData: {
+			disable: false,
+		},
+		layout: {
+			disable: false,
+			strict: true,
+		},
+	},
+  }
+}
+```
+
+- **disable** - Whether or not to disable the component base loader
+- **filename** - The name of the emitted .d.ts file
+- **typedProperties**
+  - **asyncData**
+    - **disable** - Whether or not to generate asyncData related types
+  - **layout**
+    - **disable** - Whether or not to generate types for layout names
+    - **strict** - Enable strict layout names when defining components
+
 ## `experimentalOptions`
 
 Options for loading experimental features.
@@ -130,10 +175,6 @@ Options for loading experimental features.
 kudra: {
   experimentalOptions: {
     directoryName: "experimental",
-    asyncData: {
-      disable: true,
-      filename: "asyncData",
-    },
     vuetify: {
       directoryName: "vuetify",
       disable: true,
@@ -145,9 +186,6 @@ kudra: {
 ```
 
 - **directoryName** - The name of the experimental types directory
-- **asyncData**
-  - **filename** - The name of the emitted .d.ts file
-  - **disable** - Whether or not to generate experimental asyncData types
 - **vuetify**
   - **directoryName** - The name of the experimental vuetify types directory
   - **disable** - Whether or not to generate experimental vuetify types

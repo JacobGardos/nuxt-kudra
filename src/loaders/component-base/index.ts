@@ -1,5 +1,5 @@
 import { Consola } from "consola";
-import { InterfaceDeclarationStructure, StructureKind, OptionalKind, ImportDeclarationStructure } from "ts-morph";
+import { ImportDeclarationStructure, InterfaceDeclarationStructure, StructureKind } from "ts-morph";
 import { Kudra } from "../../kudra";
 import { META_NAME } from "../../meta";
 import { KudraOptions } from "../../options";
@@ -110,6 +110,7 @@ export class ComponentBaseLoader implements Hookable {
     };
 
     // Load AsyncData Prop Types
+    /* istanbul ignore next */
     if (!this.options.typedProperties.asyncData.disable) {
       if (Array.isArray(kudraImports.namedImports)) {
         kudraImports.namedImports.push("Context");
@@ -123,6 +124,7 @@ export class ComponentBaseLoader implements Hookable {
     }
 
     // Load Layout Prop Types
+    /* istanbul ignore next */
     if (!this.options.typedProperties.layout.disable) {
       if (Array.isArray(kudraImports.namedImports)) {
         kudraImports.namedImports.push("Layout");

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Default Layout</h1>
+    Layout 3 - Success
     <nuxt />
   </div>
 </template>
