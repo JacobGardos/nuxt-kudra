@@ -9,3 +9,11 @@ export type LayoutFN<T> = (ctx: Context) => T;
 export type Layout<T, Strict extends boolean = false> = Strict extends true
   ? T | LayoutFN<T>
   : LiteralUnion<T, string> | LayoutFN<LiteralUnion<T, string>>;
+
+export type MiddlewareFN = (ctx: Context, cb: Function) => Promise<void> | void;
+
+export type Middleware<T, Strict extends boolean = false> = Strict extends true
+  ? T | T[] | MiddlewareFN
+  : LiteralUnion<T, string> | LiteralUnion<T, string>[] | MiddlewareFN;
+
+export const defineMiddleware = (middleware: MiddlewareFN) => middleware;

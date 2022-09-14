@@ -41,3 +41,9 @@ export interface Plugin {
   mode: "all" | "server" | "client";
   name: string;
 }
+
+export interface Middleware {
+  name: string;
+  src: string;
+  dst: string;
+}

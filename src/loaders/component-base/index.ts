@@ -1,22 +1,27 @@
 import { Consola } from "consola";
-import { ImportDeclarationStructure, InterfaceDeclarationStructure, StructureKind } from "ts-morph";
+import { ImportDeclarationStructure, InterfaceDeclarationStructure, StructureKind, VariableDeclarationKind } from "ts-morph";
 import { Kudra } from "../../kudra";
 import { META_NAME } from "../../meta";
 import { KudraOptions } from "../../options";
 import { DeepRequired, Layout } from "../../ts";
 import { Hookable } from "../../ts/hookable";
+import { GlobalStatement, SetsGlobal } from "../../ts/setsGlobal";
+import { GlobalsLoaderOptions } from "../global/options.interface";
 import { Loadable } from "../loadable";
+import * as Runtime from "./runtime";
+import { Middleware } from "../../ts";
 
 @Loadable({
   loaderName: "ComponentBase",
   position: "beforeAll",
 })
-export class ComponentBaseLoader implements Hookable {
+export class ComponentBaseLoader implements Hookable, SetsGlobal {
   public kudra: Kudra;
   public logger: Consola;
   public filePath: string;
 
   private layouts: Layout = {};
+  private middleware: Middleware[] = [];
 
   constructor(kudra: Kudra, logger: Consola) {
     this.kudra = kudra;
@@ -32,15 +37,42 @@ export class ComponentBaseLoader implements Hookable {
     return this.kudra.kudraOptions.componentBase;
   }
 
+  public setupGlobal(globalOptions: DeepRequired<GlobalsLoaderOptions>, globalStatement: GlobalStatement) {
+    if (!globalOptions.globalDefineMiddleware) return;
+
+    globalStatement.statements.push({
+      kind: StructureKind.VariableStatement,
+      declarationKind: VariableDeclarationKind.Const,
+      declarations: [
+        {
+          name: "defineMiddleware",
+          type: `typeof import('${META_NAME}')['defineMiddleware']`,
+        },
+      ],
+    });
+
+    return Runtime as any;
+  }
+
   public onBuildTemplates({ templateFiles, templateVars, resolve }: any) {
+    this.middleware = templateVars.middleware;
     this.layouts = templateVars.layouts;
     this.generateBaseTypes();
   }
 
+  // TODO refactor these two methods, into a single method
   private createLayoutUnion(layout: Layout): string {
     return Object.keys(layout)
       .map((layoutName) => {
         return `"${layoutName}"`;
+      })
+      .join(" | ");
+  }
+
+  private createMiddlewareUnion(middleware: Middleware[]): string {
+    return middleware
+      .map((middlewareObj) => {
+        return `"${middlewareObj.name}"`;
       })
       .join(" | ");
   }
@@ -108,6 +140,24 @@ export class ComponentBaseLoader implements Hookable {
         `Omit<Vue2ComponentOptions<Vue, D & AsyncD, M, C, Props>, "data" | "computed" | "methods" | "setup" | "props" | "mixins" | "extends">`,
       ],
     };
+
+    // Load Middleware Prop Type
+    if (!this.options.typedProperties.middleware.disable) {
+      console.log("Executed");
+      if (Array.isArray(kudraImports.namedImports)) {
+        kudraImports.namedImports.push("Middleware");
+      }
+
+      const strictFlag = this.options.typedProperties.middleware.strict ? "true" : "false";
+
+      console.log("Middleware Union", this.createMiddlewareUnion(this.middleware));
+
+      IComponentOptionsBase.properties?.push({
+        name: "middleware",
+        hasQuestionToken: true,
+        type: `Middleware<${this.createMiddlewareUnion(this.middleware)}, ${strictFlag}>`,
+      });
+    }
 
     // Load AsyncData Prop Types
     /* istanbul ignore next */

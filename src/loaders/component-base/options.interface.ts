@@ -34,6 +34,19 @@ export interface ComponentBaseLoaderOptions {
        */
       strict?: boolean;
     };
+
+    middleware?: {
+      /**
+       * Whether or not to generate middleware types
+       * @default false
+       */
+      disable?: boolean;
+      /**
+       * Enable strict middleware names when defining pages
+       * @default true
+       */
+      strict?: boolean;
+    };
   };
 }
 
@@ -45,6 +58,10 @@ export const defaultComponentBaseLoaderOptions: DeepRequired<ComponentBaseLoader
       disable: false,
     },
     layout: {
+      disable: false,
+      strict: true,
+    },
+    middleware: {
       disable: false,
       strict: true,
     },

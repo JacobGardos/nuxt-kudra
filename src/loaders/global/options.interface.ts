@@ -28,6 +28,10 @@ export interface GlobalsLoaderOptions {
    * @default true
    */
   globalDefinePlugin?: boolean;
+  /**
+   * Whether or not to make defineMiddleware available globally
+   */
+  globalDefineMiddleware?: boolean;
 }
 
 export const defaultGlobalsLoaderOptions: DeepRequired<GlobalsLoaderOptions> = {
@@ -35,4 +39,5 @@ export const defaultGlobalsLoaderOptions: DeepRequired<GlobalsLoaderOptions> = {
   filename: "globals",
   globalDefineComponent: true,
   globalDefinePlugin: true,
+  globalDefineMiddleware: true,
 };
