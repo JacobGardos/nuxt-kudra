@@ -2,6 +2,7 @@ import { NuxtOptions } from "@nuxt/types";
 import { ModuleThis } from "@nuxt/types/config/module";
 import consola, { Consola } from "consola";
 import merge from "deepmerge";
+import figlet from "figlet";
 import jetpack from "fs-jetpack";
 import { relative, resolve } from "path";
 import { Project, WriterFunction } from "ts-morph";
@@ -16,7 +17,6 @@ import { defaultOptions, KudraOptions } from "./options";
 import { NuxtInstance } from "./stubs/nuxt";
 import { DeepRequired } from "./ts";
 import { hookCallNames } from "./ts/hookable";
-import figlet from "figlet";
 
 export class Kudra {
   public moduleThis: ModuleThis;

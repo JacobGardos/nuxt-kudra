@@ -3,13 +3,12 @@ import { ImportDeclarationStructure, InterfaceDeclarationStructure, StructureKin
 import { Kudra } from "../../kudra";
 import { META_NAME } from "../../meta";
 import { KudraOptions } from "../../options";
-import { DeepRequired, Layout } from "../../ts";
+import { DeepRequired, Layout, Middleware } from "../../ts";
 import { Hookable } from "../../ts/hookable";
 import { GlobalStatement, SetsGlobal } from "../../ts/setsGlobal";
 import { GlobalsLoaderOptions } from "../global/options.interface";
 import { Loadable } from "../loadable";
 import * as Runtime from "./runtime";
-import { Middleware } from "../../ts";
 
 @Loadable({
   loaderName: "ComponentBase",
@@ -38,6 +37,7 @@ export class ComponentBaseLoader implements Hookable, SetsGlobal {
   }
 
   public setupGlobal(globalOptions: DeepRequired<GlobalsLoaderOptions>, globalStatement: GlobalStatement) {
+    /* istanbul ignore next */
     if (!globalOptions.globalDefineMiddleware) return;
 
     globalStatement.statements.push({
@@ -60,7 +60,6 @@ export class ComponentBaseLoader implements Hookable, SetsGlobal {
     this.generateBaseTypes();
   }
 
-  // TODO refactor these two methods, into a single method
   private createLayoutUnion(layout: Layout): string {
     return Object.keys(layout)
       .map((layoutName) => {
@@ -70,6 +69,10 @@ export class ComponentBaseLoader implements Hookable, SetsGlobal {
   }
 
   private createMiddlewareUnion(middleware: Middleware[]): string {
+    // Default to any when there's no middleware
+    /* istanbul ignore next */
+    if (middleware.length <= 0) return "any";
+
     return middleware
       .map((middlewareObj) => {
         return `"${middlewareObj.name}"`;
@@ -142,15 +145,13 @@ export class ComponentBaseLoader implements Hookable, SetsGlobal {
     };
 
     // Load Middleware Prop Type
+    /* istanbul ignore next */
     if (!this.options.typedProperties.middleware.disable) {
-      console.log("Executed");
       if (Array.isArray(kudraImports.namedImports)) {
         kudraImports.namedImports.push("Middleware");
       }
 
       const strictFlag = this.options.typedProperties.middleware.strict ? "true" : "false";
-
-      console.log("Middleware Union", this.createMiddlewareUnion(this.middleware));
 
       IComponentOptionsBase.properties?.push({
         name: "middleware",
