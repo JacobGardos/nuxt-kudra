@@ -26,23 +26,44 @@
 
 ## Features
 
-- Auto generate global component types
-- Auto generate global plugin types
-- Strongly typed component props
-- Strongly typed asyncData methods (Experimental)
-- Vuetify component types (Experimental)
+Auto Generates Types For
 
-## Components Demo
+- components & component props
+- plugins
+- asyncData
+- layouts
+- middleware
+- vuetify v2 components & v2 component props
+
+## Component Types Demo
 
 > #### Global nuxt components are automatically typed.
 
 <img src="https://jacobgardos.github.io/nuxt-kudra/demo/components.gif" />
 
-## Plugins Demo
+## Plugin Types Demo
 
 > #### Nuxt plugins are typed correctly on the server and the client
 
 <img src="https://jacobgardos.github.io/nuxt-kudra/demo/plugins.gif" />
+
+## AsyncData Types Demo
+
+> #### Nuxt asyncData methods are typed
+
+<img src="https://jacobgardos.github.io/nuxt-kudra/demo/asyncData.gif" />
+
+## Layouts Types Demo
+
+> #### Nuxt layout names are typed
+
+<img src="https://jacobgardos.github.io/nuxt-kudra/demo/layouts.gif" />
+
+## Middleware Types Demo
+
+> #### Nuxt middleware are typed
+
+<img src="https://jacobgardos.github.io/nuxt-kudra/demo/layouts.gif" />
 
 ## Getting Started
 
