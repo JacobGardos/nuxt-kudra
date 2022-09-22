@@ -31,6 +31,7 @@
     "build:fixture": "nuxt build test/fixture",
     "start:fixture": "nuxt start test/fixture",
     "dev:base": "nuxt test/fixtures/component-base",
+    "dev:playground": "nuxt test/fixtures/playground",
     "pack": "npm run build && npm pack",
     "test": "jest"
   },

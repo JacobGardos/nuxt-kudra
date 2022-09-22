@@ -144,13 +144,17 @@ kudra: {
 		disable: false,
 		filename: "component-base",
 		typedProperties: {
-		asyncData: {
-			disable: false,
-		},
-		layout: {
-			disable: false,
-			strict: true,
-		},
+			asyncData: {
+				disable: false,
+			},
+			layout: {
+				disable: false,
+				strict: true,
+			},
+			middleware: {
+				disable: false,
+				strict: true,
+			},
 	},
   }
 }
@@ -164,6 +168,9 @@ kudra: {
   - **layout**
     - **disable** - Whether or not to generate types for layout names
     - **strict** - Enable strict layout names when defining components
+  - **middleware**
+    - **disable** - Whether or not to generate types for middleware
+    - **strict** - Enable strict middleware names when defining components
 
 ## `experimentalOptions`
 
