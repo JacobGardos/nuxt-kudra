@@ -6,9 +6,10 @@ category: ""
 features:
   - Auto generate global component types
   - Auto generate global plugin types
-  - Strongly typed component props
-  - Strongly typed asyncData methods (Experimental)
-  - Vuetify component types (Experimental)
+  - Auto generate global middleware types
+  - Auto generate global layout types
+  - AsyncData helper type
+  - Vuetify v2 component & component props types (Experimental)
 ---
 
 <img src="./preview.png" class="light-img p-4" width="1280" height="640" alt=""/>

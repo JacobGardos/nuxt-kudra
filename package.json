@@ -1,6 +1,6 @@
 {
   "name": "nuxt-kudra",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Automated type generation for Nuxt 2",
   "repository": "JacobGardos/nuxt-kudra",
   "license": "MIT",
