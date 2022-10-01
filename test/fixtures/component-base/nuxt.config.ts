@@ -1,5 +1,4 @@
-import { defineNuxtConfig } from "../../../src";
-import kudraModule from "../../../src/module";
+import kudraModule, { defineNuxtConfig } from "../../../src";
 
 export default defineNuxtConfig({
   buildModules: ["@nuxt/typescript-build", kudraModule],

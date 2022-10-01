@@ -51,11 +51,11 @@ yarn add --dev @nuxt/typescript-build @nuxt/types @vue/runtime-dom
 
 </code-group>
 
-Then, add `nuxt-kudra/module` to the `buildModules` section of `nuxt.config.ts`:
+Then, add `nuxt-kudra` to the `buildModules` section of `nuxt.config.ts`:
 
 ```js [nuxt.config.ts]
 {
-  buildModules: ["@nuxt/typescript-build", "nuxt-kudra/module"],
+  buildModules: ["@nuxt/typescript-build", "nuxt-kudra"],
   kudra: {
     // Options
   },
@@ -105,7 +105,7 @@ import { defineNuxtConfig } from "nuxt-kudra";
 
 export default defineNuxtConfig({
   components: true,
-  buildModules: ["@nuxt/typescript-build", "nuxt-kudra/module"],
+  buildModules: ["@nuxt/typescript-build", "nuxt-kudra"],
   kudra: {
     // options
   },
