@@ -12,9 +12,6 @@ describe("Config", () => {
             vuetify: {
               disable: true,
             },
-            asyncData: {
-              disable: true,
-            },
           },
         },
       },
@@ -35,9 +32,6 @@ describe("Config", () => {
           experimentalOptions: {
             vuetify: {
               disable: true,
-            },
-            asyncData: {
-              disable: false,
             },
           },
         },
@@ -60,9 +54,6 @@ describe("Config", () => {
           experimentalOptions: {
             vuetify: {
               disable: false,
-            },
-            asyncData: {
-              disable: true,
             },
           },
         },
