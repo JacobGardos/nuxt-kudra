@@ -62,5 +62,6 @@
     "figlet": "^1.5.2",
     "fs-jetpack": "^4.3.1",
     "ts-morph": "^15.1.0"
-  }
+  },
+  "gitHead": "8106e83582ff0250e04463201ddbdb1d9b9f2f5e"
 }
