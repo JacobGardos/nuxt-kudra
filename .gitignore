@@ -1,5 +1,4 @@
-# Taken For Nuxt Project
-node_modules
+node_modules/
 *.iml
 .idea
 *.log*
