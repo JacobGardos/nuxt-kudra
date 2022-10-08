@@ -3,7 +3,7 @@ name: ci
 on:
   push:
     branches:
-      - actions-testing
+      - main
   pull_request:
     branches:
       - main
