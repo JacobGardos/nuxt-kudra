@@ -3,7 +3,7 @@ name: ci
 on:
   push:
     branches:
-      - main
+      - actions-testing
   pull_request:
     branches:
       - main
@@ -37,3 +37,5 @@ jobs:
 
       - name: Coverage
         uses: codecov/codecov-action@v2
+        with:
+          directory: ./packages/module/coverage
