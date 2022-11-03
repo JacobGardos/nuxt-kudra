@@ -1,3 +1,4 @@
 {
-  "printWidth": 144
+  "printWidth": 144,
+  "tabWidth": 2
 }

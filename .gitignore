@@ -9,7 +9,7 @@ coverage
 dist
 sw.*
 .env
-kudra
+**/test/fixtures/**/kudra
 nuxt-kudra-1.0.0.tgz
 lib
 *.tgz

@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "lib": ["esnext", "esnext.asynciterable", "dom"],
+    "resolveJsonModule": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "noEmit": true,
+    "baseUrl": ".",
+    "esModuleInterop": true,
+    "paths": {
+      "~/*": ["./*"]
+    },
+    "allowJs": true,
+    "jsx": "preserve",
+    "skipLibCheck": true,
+    "types": ["@nuxt/types", "@nuxt/typescript-build"]
+  },
+  "vueCompilerOptions": {
+    "target": 2.7
+  }
+}
