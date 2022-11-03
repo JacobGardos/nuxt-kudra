@@ -1,0 +1,28 @@
+{
+  "name": "@kudra/typescript-build",
+  "version": "1.2.0",
+  "description": "Custom implementation of @nuxt/typescript-build for kudra apps",
+  "author": "Jacob Gardos <49768172+JacobGardos@users.noreply.github.com>",
+  "homepage": "https://github.com/JacobGardos/nuxt-kudra#readme",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JacobGardos/nuxt-kudra.git"
+  },
+  "scripts": {
+    "build": "npm run clean && npm run compile",
+    "clean": "rimraf lib",
+    "compile": "tsc"
+  },
+  "bugs": {
+    "url": "https://github.com/JacobGardos/nuxt-kudra/issues"
+  }
+}

@@ -7,6 +7,7 @@
     "create-kudra-app": "bin/index.js"
   },
   "scripts": {
+    "clean": "rimraf lib",
     "dev": "ts-node-dev --respawn --clear src/index.ts",
     "build": "tsc -p .",
     "link": "npm run build && npm unlink kudra && npm link"

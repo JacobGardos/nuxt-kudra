@@ -11,6 +11,7 @@
     "publish": "lerna publish --no-private"
   },
   "devDependencies": {
-    "lerna": "^5.6.1"
+    "lerna": "^5.6.1",
+    "rimraf": "^3.0.2"
   }
 }
